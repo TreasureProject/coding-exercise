@@ -24,11 +24,15 @@ The web application should consist of two pages:
 ---
 
 ## Local Setup
-1. A boilerplate template is set up for you. For this repository and install necessary dependencies:
+1. A boilerplate template is set up for you. Fork this repository and install necessary dependencies:
 ```sh
 npm install
 ```
-2. `graphql-codegen` is set up to generate types from the subgraph. You can use the client in `lib/client.ts` to query the subgraph after running code generation:
+2. Copy the example environment file and fill in with your own variables (see `Instructions > Inventory Page` below for more info):
+```sh
+cp .env.sample .env
+```
+3. `graphql-codegen` is set up to generate types from the subgraph. You can use the client in `lib/client.ts` to query the subgraph after running code generation:
 ```sh
 npm run codegen
 ```
@@ -36,7 +40,7 @@ npm run codegen
 ## Instructions
 - Use any front-end framework you want. At Treasure, we use [Next.js](https://nextjs.org)/[Remix](http://remix.run) and [Tailwind CSS](https://tailwindcss.com).
 - Use any wallet connection/Web3 framework you want. At Treasure, we use [ConnectKit](https://github.com/family/connectkit)/[RainbowKit](https://www.rainbowkit.com) and [wagmi](https://wagmi.sh).
-- Inventory Page should pull data from the [Cryptopunks subgraph](https://thegraph.com/explorer/subgraphs/YqMJatbgbqy1GodtbYZv4U9NzyaScCgSF7CAE5ivAM7?view=Playground&chain=mainnet).
+- Inventory Page should pull data from the [Cryptopunks subgraph](https://thegraph.com/explorer/subgraphs/YqMJatbgbqy1GodtbYZv4U9NzyaScCgSF7CAE5ivAM7?view=Playground&chain=mainnet). Please create an account at The Graph and obtain your own API key to use in the `.env` file.
 - Details Page should pull data directly from the [Cryptopunks smart contract](https://etherscan.io/address/0x16F5A35647D6F03D5D3da7b35409D65ba03aF3B2).
 - Optimize the code for readability and performance.
 - Feel free to add comments to explain your thought process.
